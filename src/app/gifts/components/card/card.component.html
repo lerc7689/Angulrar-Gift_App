@@ -1,0 +1,18 @@
+<div class="card mb-2 text-center bg-dark">
+  <shared-lazy-image
+    *ngIf="!isImgLoaded"
+    [url]="singleGift.images.downsized_medium.url"
+    [alt]="singleGift.title || 'No name'"
+  ></shared-lazy-image>
+  <img
+    [src]="singleGift.images.downsized_medium.url"
+    [alt]="singleGift.title"
+    class="card-img-top animate__animated animate__fadeIn"
+    (load)="onLoadingImage()"
+    [ngStyle]="{ display: isImgLoaded ? '' : 'none' }"
+  />
+
+  <div class="card-body text-white">
+    <p class="card-text">{{ singleGift.title }}</p>
+  </div>
+</div>

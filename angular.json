@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "gift-app": {
+      
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -29,11 +30,14 @@
             "polyfills": [
               "zone.js"
             ],
+            
             "tsConfig": "tsconfig.app.json",
             "assets": [
+               "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
+
               }
             ],
             "styles": [
